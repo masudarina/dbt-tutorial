@@ -42,14 +42,3 @@ clean-targets:         # directories to be removed by `dbt clean`
 #         country_code: varchar(2)
 #         country_name: varchar(32)
 
-seeds:
-  test:
-    +enabled: true
-    # This configures seeds/orders_4.csv
-    orders_date:
-      # Override column types
-      +column_types:
-        order_id: number(2,0)
-        user_id: number(2,0)
-        order_date: varchar(32)
-        status: varchar(32)
